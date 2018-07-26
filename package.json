@@ -1,6 +1,6 @@
 {
   "name": "yassium",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ES2015 Template Tag for Python-like format strings",
   "main": "index.js",
   "files": [
@@ -12,5 +12,6 @@
   },
   "author": "Anton Verinov <anton@verinov.com>",
   "repository": "zemlanin/yassium",
+  "runkitExample": "var y = require('yassium');\n\ny`hello ${y}`(\"world\");",
   "license": "MIT"
 }
