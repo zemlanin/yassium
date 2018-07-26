@@ -15,8 +15,5 @@ assert.throws(
   function() {
     y`test string ${y.a.b}`({});
   },
-  {
-    name: "TypeError",
-    message: "Cannot read property 'b' of undefined"
-  }
+  TypeError
 );
