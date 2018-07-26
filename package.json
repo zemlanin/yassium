@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "ES2015 Template Tag for Python-like format strings",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
   "scripts": {
     "test": "node test.js"
   },
