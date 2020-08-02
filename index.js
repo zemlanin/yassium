@@ -10,11 +10,12 @@ function compileValue(v) {
   }
 
   if (v && v[path]) {
-    return function(obj) {
+    return function compiled(obj) {
       var r = obj;
+      var i = 0;
 
-      while (v[path].length) {
-        r = r[v[path].shift()];
+      while (i < v[path].length) {
+        r = r[v[path][i++]];
       }
 
       return r;
