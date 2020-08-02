@@ -1,7 +1,7 @@
 # yassium
 ES2015 Template Tag for Python-like format strings. Powered by [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
 
-[![Build Status](https://travis-ci.org/zemlanin/yassium.svg?branch=master)](https://travis-ci.org/zemlanin/yassium)
+[![Build Status](https://github.com/zemlanin/yassium/workflows/Node%20CI/badge.svg?branch=master)](https://github.com/zemlanin/yassium/actions)
 
 ## Installation
 ```
