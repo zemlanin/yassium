@@ -29,7 +29,7 @@ function yassium(strings) {
   var values = Array.prototype.splice.call(arguments, 1);
   var compiledValues = values.map(compileValue);
 
-  return function(obj) {
+  return function yassiumRender(obj) {
     var result = [strings[0]];
     var expr;
 
@@ -44,7 +44,10 @@ function yassium(strings) {
   };
 }
 
-yassium[path] = [];
+Object.defineProperty(yassium, path, {
+  value: [],
+  enumerable: false,
+});
 
 function proxyGet(obj, prop) {
   if (prop === path) {
@@ -52,13 +55,17 @@ function proxyGet(obj, prop) {
   }
 
   var target = {};
-  target[path] = obj[path].concat(prop);
+
+  Object.defineProperty(target, path, {
+    value: obj[path].concat(prop),
+    enumerable: false,
+  });
 
   return new Proxy(target, {
-    get: proxyGet
+    get: proxyGet,
   });
 }
 
 module.exports = new Proxy(yassium, {
-  get: proxyGet
+  get: proxyGet,
 });
