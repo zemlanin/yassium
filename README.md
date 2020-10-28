@@ -10,7 +10,7 @@ $ npm install yassium
 
 ## Usage
 ```js
-import y from "yassium";
+const y = require("yassium");
 
 const simplePlaceholder = y`hello ${y}`;
 simplePlaceholder("world") === "hello world";
@@ -18,3 +18,8 @@ simplePlaceholder("world") === "hello world";
 const nestedValue = y`my favorite number is ${y.lol.length}`;
 nestedValue({ lol: ["something"] }) === "my favorite number is 1";
 ```
+
+## Links
+- [Source code](https://github.com/zemlanin/yassium)
+- [npm](https://www.npmjs.com/package/yassium)
+- [RunKit demo](https://runkit.com/npm/yassium)
